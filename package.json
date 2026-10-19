@@ -1,0 +1,65 @@
+{
+  "name": "@asvri/react-native",
+  "version": "1.0.0",
+  "description": "ASVRI Checkout for React Native: open a checkout session made by your server in a secure WebView and get back whether the customer paid, cancelled or closed it.",
+  "keywords": [
+    "asvri",
+    "react-native",
+    "payments",
+    "checkout",
+    "webview",
+    "africa"
+  ],
+  "homepage": "https://www.asvri.com/developers",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asvri/asvri-react-native.git"
+  },
+  "bugs": {
+    "url": "https://github.com/asvri/asvri-react-native/issues"
+  },
+  "license": "MIT",
+  "author": "ASVRI",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "react-native": "src/index.ts",
+  "source": "src/index.ts",
+  "files": [
+    "lib",
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "jest",
+    "prepublishOnly": "npm run build && npm test"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "react-native": ">=0.74",
+    "react-native-webview": ">=13"
+  },
+  "devDependencies": {
+    "@react-native/babel-preset": "0.88.0",
+    "@react-native/jest-preset": "^0.88.0",
+    "@testing-library/react-native": "^14.1.0",
+    "@types/jest": "^30.0.0",
+    "@types/react": "^19.1.1",
+    "jest": "^30.0.0",
+    "react": "19.3.1",
+    "react-native": "0.88.0",
+    "react-native-webview": "^14.0.1",
+    "react-test-renderer": "19.3.1",
+    "typescript": "~5.9.3"
+  },
+  "jest": {
+    "preset": "@react-native/jest-preset",
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/lib/"
+    ]
+  }
+}
