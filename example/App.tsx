@@ -39,8 +39,8 @@ export default function App() {
     <SafeAreaView style={styles.screen}>
       <View style={styles.body}>
         <Text style={styles.name}>Tote bag</Text>
-        <Text>₦2,500</Text>
-        <View style={styles.button}><Button title={busy ? "Opening…" : "Pay ₦2,500"} onPress={pay} disabled={busy} /></View>
+        <Text>$25</Text>
+        <View style={styles.button}><Button title={busy ? "Opening…" : "Pay $25"} onPress={pay} disabled={busy} /></View>
         <Text testID="message">{message}</Text>
       </View>
       {checkout}
